@@ -264,7 +264,6 @@ class model{
 			$sql .= ' '.$this->sql_fields;
 		}
 		$sql .= ' from '.$table.' where '.$this->id_name.' = "'.$id.'"';
-		//echo $sql;
 		$this->sql_to_execute = $sql;
 	}
 
@@ -402,7 +401,6 @@ class model{
 
 		if($this->sql_act == 'select_id'){
 			$sql = $this->sql_to_execute;
-			//echo $sql;
 			$res = mysql_query($sql);
 			$res_code = array();
 			$res_code['tot_rows'] = 0;
